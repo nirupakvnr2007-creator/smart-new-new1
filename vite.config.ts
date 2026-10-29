@@ -13,8 +13,8 @@ export default defineConfig(() => {
       },
     },
     server: {
-      // Allow the Render hostname.
-      allowedHosts: ['smart-new.onrender.com'],
+      // Allow all hostnames (supports any Render deployment URL, custom domain, or localhost)
+      allowedHosts: true as const,
 
       // HMR is disabled in AI Studio via DISABLE_HMR env var.
       // Do not modify—file watching is disabled to prevent flickering during agent edits.
@@ -22,6 +22,9 @@ export default defineConfig(() => {
 
       // Disable file watching when DISABLE_HMR is true to save CPU during agent edits.
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
+    },
+    preview: {
+      allowedHosts: true as const,
     },
   };
 });

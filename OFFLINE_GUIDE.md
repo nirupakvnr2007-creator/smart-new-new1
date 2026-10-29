@@ -1,4 +1,4 @@
-# Mepco Retail Hub — 100% Offline Architecture
+# Smart Inventory Assistant — 100% Offline Architecture
 
 This project is built to operate **strictly with zero cloud servers**. All data persistence, customer feedback, QR code generation, billing, and role permissions run entirely on your local machine with your local database.
 

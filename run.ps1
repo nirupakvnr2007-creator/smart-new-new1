@@ -1,6 +1,6 @@
-# Mepco Retail Hub - Offline PowerShell Launcher
+# Smart Inventory Assistant - Offline PowerShell Launcher
 Write-Host "=================================================================" -ForegroundColor Cyan
-Write-Host "  MEPCO RETAIL HUB - 100% OFFLINE LOCAL RUNNER" -ForegroundColor Cyan
+Write-Host "  SMART INVENTORY ASSISTANT - 100% OFFLINE LOCAL RUNNER" -ForegroundColor Cyan
 Write-Host "  Zero Cloud Server Dependencies - Local MongoDB Engine" -ForegroundColor Cyan
 Write-Host "=================================================================" -ForegroundColor Cyan
 Write-Host ""

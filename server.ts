@@ -1092,23 +1092,35 @@ async function startServer() {
   });
 
   // 12. Mount Vite or static dist
-  if (fs.existsSync(path.resolve('dist')) && process.env.VITE_DEV !== 'true') {
-    app.use(express.static('dist'));
+  const distPath = path.resolve(process.cwd(), 'dist');
+  if (fs.existsSync(distPath) && process.env.VITE_DEV !== 'true') {
+    app.use(express.static(distPath));
     app.get('*', (_req, res) => {
-      res.sendFile(path.resolve('dist', 'index.html'));
+      res.sendFile(path.join(distPath, 'index.html'));
     });
   } else {
     const vite = await createViteServer({
-      server: { middlewareMode: true },
+      server: { middlewareMode: true, allowedHosts: true },
       appType: 'spa'
     });
     app.use(vite.middlewares);
+    app.use('*', async (req, res, next) => {
+      try {
+        const url = req.originalUrl;
+        const indexPath = path.resolve(process.cwd(), 'index.html');
+        let template = fs.readFileSync(indexPath, 'utf-8');
+        template = await vite.transformIndexHtml(url, template);
+        res.status(200).set({ 'Content-Type': 'text/html' }).end(template);
+      } catch (e) {
+        next(e);
+      }
+    });
   }
 
   app.listen(PORT, '0.0.0.0', () => {
     const url = `http://localhost:${PORT}`;
     console.log(`===================================================`);
-    console.log(`  Mepco Retail Hub running on ${url}`);
+    console.log(`  Smart Inventory Assistant running on ${url}`);
     console.log(`  Target Database: MongoDB smart_inventory (Multi-Tenant Isolated)`);
     console.log(`===================================================`);
 

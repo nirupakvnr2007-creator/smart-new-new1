@@ -179,7 +179,7 @@ export const LoginGatewayScreen: React.FC<LoginGatewayScreenProps> = ({
             <span className="material-symbols-outlined text-[28px]">storefront</span>
           </div>
           <h1 className="font-headline font-bold text-[22px] text-[#0b1c30]">
-            Mepco Retail Hub
+            Smart Inventory Assistant
           </h1>
           <div className="flex items-center justify-center gap-1.5 text-[12px] text-[#565e74] min-h-[20px]">
             {currentShop ? (

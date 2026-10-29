@@ -1,9 +1,9 @@
 @echo off
-TITLE Mepco Retail Hub - 100% Offline Local Runner
+TITLE Smart Inventory Assistant - 100% Offline Local Runner
 cd /d "%~dp0"
 
 echo =================================================================
-echo   MEPCO RETAIL HUB - 100% OFFLINE LOCAL RUNNER
+echo   SMART INVENTORY ASSISTANT - 100% OFFLINE LOCAL RUNNER
 echo   Zero Cloud Server Dependencies - Local MongoDB Engine
 echo =================================================================
 echo.
@@ -35,7 +35,7 @@ set AUTO_OPEN=true
 set NODE_ENV=production
 
 echo.
-echo [3/3] Launching Mepco Retail Hub...
+echo [3/3] Launching Smart Inventory Assistant...
 echo - Target MongoDB: mongodb://localhost:27017/smart_inventory
 echo - Web App URL:    http://localhost:3000
 echo.

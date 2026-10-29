@@ -1,11 +1,11 @@
 #!/bin/bash
-# Mepco Retail Hub - 100% Offline Local Runner
+# Smart Inventory Assistant - 100% Offline Local Runner
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 cd "$DIR"
 
 echo "================================================================="
-echo "  MEPCO RETAIL HUB - 100% OFFLINE LOCAL RUNNER"
+echo "  SMART INVENTORY ASSISTANT - 100% OFFLINE LOCAL RUNNER"
 echo "  Zero Cloud Server Dependencies - Local MongoDB Engine"
 echo "================================================================="
 echo ""
@@ -47,6 +47,6 @@ npm start
 
 echo ""
 echo "================================================================="
-echo "  Mepco Retail Hub server has stopped."
+echo "  Smart Inventory Assistant server has stopped."
 echo "================================================================="
 read -p "Press Enter to exit..."
