@@ -924,6 +924,10 @@ async function startServer() {
       products: fileDb.products.filter((p) => p.shopId === effectiveShopId)
     });
   });
+  const publicPath = path.resolve(process.cwd(), "public");
+  if (fs.existsSync(publicPath)) {
+    app.use(express.static(publicPath));
+  }
   const distPath = path.resolve(process.cwd(), "dist");
   if (fs.existsSync(distPath) && process.env.VITE_DEV !== "true") {
     app.use(express.static(distPath));

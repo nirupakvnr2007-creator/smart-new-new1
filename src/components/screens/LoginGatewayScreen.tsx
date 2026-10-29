@@ -20,8 +20,8 @@ export const LoginGatewayScreen: React.FC<LoginGatewayScreenProps> = ({
   onShowToast,
   isSyncingWithServer = false
 }) => {
-  // If no shop exists, default to register. Otherwise default to login.
-  const [mode, setMode] = useState<'login' | 'register'>(currentShop ? 'login' : 'register');
+  // Default to login mode
+  const [mode, setMode] = useState<'login' | 'register'>('login');
 
   // Register Form
   const [shopName, setShopName] = useState('');
