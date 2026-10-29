@@ -1,0 +1,68 @@
+{
+  "shops": [
+    {
+      "id": "shop-01",
+      "name": "Smart Retail Hub",
+      "ownerName": "Store Administrator",
+      "countryCode": "+91",
+      "phone": "9840123456",
+      "email": "owner@store.com",
+      "createdAt": "2026-10-20T10:00:00.000Z"
+    }
+  ],
+  "users": [],
+  "products": [
+    {
+      "id": "prod-sku103",
+      "shopId": "shop-01",
+      "sku": "SKU-103",
+      "name": "Natural Honey 250g",
+      "brand": "Apex Apiaries Direct",
+      "category": "Pantry & Sweeteners",
+      "price": 190,
+      "availableStock": 18,
+      "minThreshold": 10,
+      "supplierName": "Apex Apiaries Direct",
+      "supplierEmail": "procure@apexapiaries.com",
+      "supplierPhone": "+91 98401 88990",
+      "qrCode": "/?feedback=prod-sku103",
+      "createdAt": "2026-10-20T10:00:00.000Z"
+    },
+    {
+      "id": "prod-sku102",
+      "shopId": "shop-01",
+      "sku": "SKU-102",
+      "name": "Organic Almond Milk 1L",
+      "brand": "Green Meadows Dairy",
+      "category": "Beverages & Dairy",
+      "price": 240,
+      "availableStock": 8,
+      "minThreshold": 10,
+      "supplierName": "Green Meadows Dairy",
+      "supplierEmail": "orders@greenmeadows.com",
+      "supplierPhone": "+91 98402 12345",
+      "qrCode": "/?feedback=prod-sku102",
+      "createdAt": "2026-10-20T10:00:00.000Z"
+    }
+  ],
+  "restockRequests": [
+    {
+      "id": "req-sku102",
+      "shopId": "shop-01",
+      "productId": "prod-sku102",
+      "productName": "Organic Almond Milk 1L",
+      "brand": "Green Meadows Dairy",
+      "currentStock": 8,
+      "minThreshold": 10,
+      "requestedQuantity": 10,
+      "supplierName": "Green Meadows Dairy",
+      "supplierEmail": "orders@greenmeadows.com",
+      "supplierPhone": "+91 98402 12345",
+      "status": "Pending",
+      "createdAt": "2026-10-20T10:05:00.000Z"
+    }
+  ],
+  "transactions": [],
+  "forumPosts": [],
+  "reviews": []
+}

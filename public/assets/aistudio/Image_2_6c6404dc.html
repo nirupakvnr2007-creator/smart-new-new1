@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-primary": "#b7c4ff", "tertiary-container": "#006948", "outline-variant": "#c4c5d7", "on-background": "#0b1c30", "on-secondary-container": "#5c647a", "outline": "#747686", "on-surface-variant": "#434655", "background": "#f8f9ff", "tertiary-fixed-dim": "#68dba9", "on-secondary": "#ffffff", "on-secondary-fixed": "#131b2e", "surface-container-lowest": "#ffffff", "on-surface": "#0b1c30", "surface-container-highest": "#d3e4fe", "on-primary-fixed-variant": "#0039b5", "on-error": "#ffffff", "inverse-surface": "#213145", "secondary-fixed-dim": "#bec6e0", "surface": "#f8f9ff", "surface-variant": "#d3e4fe", "surface-container-low": "#eff4ff", "primary-fixed": "#dce1ff", "error-container": "#ffdad6", "on-primary-container": "#cad3ff", "tertiary-fixed": "#85f8c4", "surface-container-high": "#dce9ff", "on-tertiary-fixed-variant": "#005137", "tertiary": "#004f35", "surface-container": "#e5eeff", "primary-fixed-dim": "#b7c4ff", "on-secondary-fixed-variant": "#3f465c", "on-primary-fixed": "#001551", "on-tertiary-container": "#76eab6", "secondary-container": "#dae2fd", "secondary": "#565e74", "error": "#ba1a1a", "on-tertiary": "#ffffff", "surface-dim": "#cbdbf5", "on-tertiary-fixed": "#002114", "inverse-on-surface": "#eaf1ff", "secondary-fixed": "#dae2fd", "on-primary": "#ffffff", "primary-container": "#1d4ed8", "primary": "#0037b0", "on-error-container": "#93000a", "surface-tint": "#2151da", "surface-bright": "#f8f9ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "margin": "2rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "gutter-sm": "1rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-md": "1rem", "space-xl": "2.5rem" }, "fontFamily": { "body-md": ["Plus Jakarta Sans"], "headline-lg": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "label-sm": ["Plus Jakarta Sans"], "metric-mono": ["Space Grotesk"], "display-lg": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "title-md": ["Space Grotesk"], "body-sm": ["Plus Jakarta Sans"], "display-lg-mobile": ["Space Grotesk"], "label-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "metric-mono": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 px-space-md flex flex-col justify-center"><div class="flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[20px]">inventory_2</span></div><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface leading-none tracking-tight">Smart Retail Assistant</span><span class="font-label-sm text-label-sm text-secondary leading-tight mt-0.5">Mepco Retail Hub</span></div></div><div class="flex items-center gap-space-xs"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm">Admin</span><button class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between pt-1 mt-0.5"><div class="flex items-center gap-1.5 overflow-hidden"><span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim shrink-0 animate-pulse"></span><span class="font-label-sm text-label-sm text-tertiary truncate max-w-[210px]">Connected: retail_hub_db / Cluster0</span></div><div class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold tracking-wider">Auth Store</div></div></div></header><main class="flex flex-col relative w-full pt-20 pb-24 px-space-md bg-surface flex-grow"><div class="flex flex-col w-full space-y-space-md">
+<!-- Micro-Banner: Status & Tenant Indicator -->
+<div class="w-full bg-surface-container rounded-xl p-space-sm shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim animate-ping shrink-0"></div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface truncate">Atlas Cluster: <strong class="text-tertiary">Mepco-Retail-Node-01</strong></span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Sync: 12ms latency • TLS 1.3 Active</span>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded-full shadow-sm shrink-0">
+<span class="material-symbols-outlined text-tertiary text-[16px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-sm text-[11px] font-semibold text-tertiary">Operational</span>
+</div>
+</div>
+<!-- Primary Card: Authentication Hub -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col space-y-space-md">
+<!-- Header with Segmented Pill Toggle -->
+<div class="flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Enterprise Onboarding</span>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">Access &amp; Branch Portal</h2>
+</div>
+<div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+</div>
+<!-- Segmented Tab Switcher -->
+<div class="w-full bg-surface-container-low p-1 rounded-lg grid grid-cols-2 gap-1" id="authTabGroup">
+<button class="w-full py-2 rounded-md font-label-md text-label-md transition-all flex items-center justify-center gap-1.5 bg-surface-container-lowest text-primary shadow-sm font-semibold" id="tabRegisterBtn" onclick="switchAuthTab('register')" type="button">
+<span class="material-symbols-outlined text-[18px]">add_business</span>
+<span>Register New Shop</span>
+</button>
+<button class="w-full py-2 rounded-md font-label-md text-label-md transition-all flex items-center justify-center gap-1.5 text-secondary hover:text-on-surface" id="tabLoginBtn" onclick="switchAuthTab('login')" type="button">
+<span class="material-symbols-outlined text-[18px]">login</span>
+<span>Existing Shop Login</span>
+</button>
+</div>
+</div>
+<!-- Mode 1: Register Form Container -->
+<form class="flex flex-col space-y-space-sm" id="registerForm" onsubmit="event.preventDefault(); simulateProvisionSuccess();">
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">storefront</span>
+          Shop / Outlet Legal Name
+        </label>
+<div class="w-full bg-surface-container-low rounded-lg p-space-sm flex items-center gap-2 focus-within:bg-surface-container-lowest focus-within:shadow-[0_0_0_2px_#1d4ed8]">
+<input class="bg-transparent w-full text-on-surface font-body-md text-body-md outline-none placeholder:text-outline" placeholder="e.g. Apex Central Mart" required="" type="text" value="GreenHarvest Supermarket"/>
+<span class="material-symbols-outlined text-outline text-[18px]">store</span>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-space-sm">
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">badge</span>
+            Owner Full Legal Name
+          </label>
+<div class="w-full bg-surface-container-low rounded-lg p-space-sm flex items-center gap-2 focus-within:bg-surface-container-lowest focus-within:shadow-[0_0_0_2px_#1d4ed8]">
+<input class="bg-transparent w-full text-on-surface font-body-md text-body-md outline-none placeholder:text-outline" placeholder="Full Name" required="" type="text" value="Dr. Maya Chen"/>
+<span class="material-symbols-outlined text-outline text-[18px]">person</span>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">call</span>
+            Contact Phone Number
+          </label>
+<div class="w-full bg-surface-container-low rounded-lg p-space-sm flex items-center gap-2 focus-within:bg-surface-container-lowest focus-within:shadow-[0_0_0_2px_#1d4ed8]">
+<input class="bg-transparent w-full text-on-surface font-body-md text-body-md outline-none placeholder:text-outline" placeholder="+91 XXXXX XXXXX" required="" type="tel" value="+91 98401 23456"/>
+<span class="material-symbols-outlined text-outline text-[18px]">dialpad</span>
+</div>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">mail</span>
+          Administrative Email &amp; Passkey
+        </label>
+<div class="grid grid-cols-1 gap-2">
+<div class="w-full bg-surface-container-low rounded-lg p-space-sm flex items-center gap-2 focus-within:bg-surface-container-lowest focus-within:shadow-[0_0_0_2px_#1d4ed8]">
+<input class="bg-transparent w-full text-on-surface font-body-md text-body-md outline-none placeholder:text-outline" placeholder="admin@domain.com" required="" type="email" value="admin@greenharvest.io"/>
+<span class="material-symbols-outlined text-outline text-[18px]">alternate_email</span>
+</div>
+<div class="w-full bg-surface-container-low rounded-lg p-space-sm flex items-center gap-2 focus-within:bg-surface-container-lowest focus-within:shadow-[0_0_0_2px_#1d4ed8]">
+<input class="bg-transparent w-full text-on-surface font-body-md text-body-md outline-none placeholder:text-outline" placeholder="••••••••••••" required="" type="password" value="SuperSecureToken#2024"/>
+<span class="material-symbols-outlined text-outline text-[18px]">key</span>
+</div>
+</div>
+</div>
+<!-- Database Cluster Specs Callout -->
+<div class="p-space-sm bg-surface-container rounded-lg flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">database</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">MongoDB Atlas Multi-Tenant Pool</span>
+<span class="font-label-sm text-[10px] text-tertiary font-bold px-1.5 py-0.2 rounded bg-tertiary-fixed">READY</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary truncate">Dedicated shard with tenant isolation &amp; TLS-secured POS pipeline.</p>
+</div>
+</div>
+<button class="w-full mt-2 py-3 px-4 bg-primary text-on-primary rounded-lg font-label-md text-label-md font-semibold shadow-md active:scale-[0.99] transition-transform flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-[20px]">how_to_reg</span>
+<span>Register &amp; Provision Multi-Role Workspace</span>
+</button>
+</form>
+<!-- Mode 2: Existing Login Container (Initially Hidden) -->
+<form class="hidden flex-col space-y-space-sm" id="loginForm" onsubmit="event.preventDefault(); simulateProvisionSuccess();">
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">domain</span>
+          Retail Tenant Code or Store ID
+        </label>
+<div class="w-full bg-surface-container-low rounded-lg p-space-sm flex items-center gap-2 focus-within:bg-surface-container-lowest focus-within:shadow-[0_0_0_2px_#1d4ed8]">
+<input class="bg-transparent w-full text-on-surface font-body-md text-body-md outline-none placeholder:text-outline" placeholder="GH-9840-01" type="text"/>
+<span class="material-symbols-outlined text-outline text-[18px]">tag</span>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">mail</span>
+          Account Email
+        </label>
+<div class="w-full bg-surface-container-low rounded-lg p-space-sm flex items-center gap-2 focus-within:bg-surface-container-lowest focus-within:shadow-[0_0_0_2px_#1d4ed8]">
+<input class="bg-transparent w-full text-on-surface font-body-md text-body-md outline-none placeholder:text-outline" placeholder="owner@store.com" type="email"/>
+<span class="material-symbols-outlined text-outline text-[18px]">alternate_email</span>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">lock</span>
+          Master Password / Passkey
+        </label>
+<div class="w-full bg-surface-container-low rounded-lg p-space-sm flex items-center gap-2 focus-within:bg-surface-container-lowest focus-within:shadow-[0_0_0_2px_#1d4ed8]">
+<input class="bg-transparent w-full text-on-surface font-body-md text-body-md outline-none placeholder:text-outline" placeholder="••••••••••••" type="password"/>
+<span class="material-symbols-outlined text-outline text-[18px]">visibility</span>
+</div>
+</div>
+<button class="w-full mt-2 py-3 px-4 bg-primary text-on-primary rounded-lg font-label-md text-label-md font-semibold shadow-md active:scale-[0.99] transition-transform flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-[20px]">login</span>
+<span>Authenticate &amp; Unlock Console</span>
+</button>
+</form>
+</div>
+<!-- Authenticated Session & Store Identity Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="relative">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center font-headline-md text-headline-md shadow-sm">
+          GH
+        </div>
+<span class="absolute -bottom-1 -right-1 w-4 h-4 bg-tertiary-fixed-dim rounded-full shadow-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary-fixed text-[10px]">shield</span>
+</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface truncate">GreenHarvest Supermarket</span>
+<span class="font-label-sm text-[10px] bg-secondary-container text-on-secondary-fixed-variant px-1.5 py-0.5 rounded-full font-bold">HQ-MAIN</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary truncate">Owner: Dr. Maya Chen • ID: #EMP-001</span>
+</div>
+</div>
+<button class="h-9 px-3 bg-secondary-container hover:bg-secondary-fixed text-on-secondary-fixed-variant rounded-lg font-label-sm text-label-sm font-semibold flex items-center gap-1 shrink-0 transition-colors" onclick="triggerQuickProvisionModal()">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>Add Staff</span>
+</button>
+</div>
+<!-- Role Privilege Architecture Cards -->
+<div class="w-full flex flex-col space-y-space-xs">
+<div class="flex items-center justify-between px-1">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Security Architecture</span>
+<h3 class="font-title-md text-title-md text-on-surface">Multi-Role Privileges</h3>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">policy</span>
+        RBAC Active
+      </span>
+</div>
+<!-- 1. Manager Privilege Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden space-y-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">manage_accounts</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">Store Manager</h4>
+<span class="font-label-sm text-[11px] text-primary font-semibold">Tier-1 Administrative Authority</span>
+</div>
+</div>
+<span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-semibold">
+          2 Active
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        High-trust operational clearance covering catalog lifecycles, replenishment thresholds, and inventory audit overrides.
+      </p>
+<div class="grid grid-cols-1 gap-1.5 pt-1">
+<div class="flex items-center gap-2 bg-surface-container-low px-2.5 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check</span>
+<span class="font-label-sm text-label-sm text-on-surface">Full catalog management: add, modify &amp; sunset SKUs</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-low px-2.5 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check</span>
+<span class="font-label-sm text-label-sm text-on-surface">Review &amp; approve bulk restock orders &amp; write-offs</span>
+</div>
+</div>
+</div>
+<!-- 2. Cashier Privilege Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">point_of_sale</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">POS Cashier</h4>
+<span class="font-label-sm text-[11px] text-secondary font-semibold">Checkout &amp; Register Terminal</span>
+</div>
+</div>
+<span class="bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-semibold">
+          3 Active
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Rapid barcode scanning, counter billing, tender reconciliation, and automatic inventory decrements upon transaction sign-off.
+      </p>
+<div class="grid grid-cols-1 gap-1.5 pt-1">
+<div class="flex items-center gap-2 bg-surface-container-low px-2.5 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check</span>
+<span class="font-label-sm text-label-sm text-on-surface">POS billing console with immediate stock decrement hook</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-low px-2.5 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check</span>
+<span class="font-label-sm text-label-sm text-on-surface">View-only shift sales metrics &amp; receipt archive</span>
+</div>
+</div>
+</div>
+<!-- 3. Helper Privilege Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">Floor Helper</h4>
+<span class="font-label-sm text-[11px] text-tertiary font-semibold">Floor Assist &amp; Restock Operations</span>
+</div>
+</div>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-semibold">
+          4 Active
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Floor support staff enabled to review shelf levels, track high-velocity trend alerts, and coordinate via internal forums.
+      </p>
+<div class="grid grid-cols-1 gap-1.5 pt-1">
+<div class="flex items-center gap-2 bg-surface-container-low px-2.5 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check</span>
+<span class="font-label-sm text-label-sm text-on-surface">Read access for sales trends, shelf counts &amp; alerts</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-low px-2.5 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check</span>
+<span class="font-label-sm text-label-sm text-on-surface">Team bulletin forum &amp; restock flag participation</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Active Staff Roster Table Section -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Roster Registry</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Active Staff Directory</h3>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded-lg">
+<span class="material-symbols-outlined text-[16px] text-secondary">filter_list</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">All Branches</span>
+</div>
+</div>
+<!-- Mobile-Optimized Roster Cards (Structured List for high density) -->
+<div class="flex flex-col space-y-2" id="rosterListContainer">
+<!-- Member 1: Manager -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col space-y-2">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xs shrink-0">
+              AK
+            </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Ananya Kapoor</span>
+<span class="font-body-sm text-body-sm text-secondary">ananya@greenharvest.io</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-primary-fixed text-on-primary-fixed-variant">
+            Manager
+          </span>
+</div>
+<div class="flex items-center justify-between pt-1 border-t-0 bg-surface-container-lowest/80 px-2 py-1.5 rounded-md">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="font-label-sm text-label-sm">Shift: 07:00 - 15:30 (Morning)</span>
+</div>
+<span class="inline-flex items-center gap-1 text-[11px] font-semibold text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-pulse"></span>
+            On Duty
+          </span>
+</div>
+</div>
+<!-- Member 2: Cashier -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col space-y-2">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-xs shrink-0">
+              RJ
+            </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Rahul Joshi</span>
+<span class="font-body-sm text-body-sm text-secondary">pos.lane2@greenharvest.io</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-secondary-container text-on-secondary-fixed">
+            Cashier
+          </span>
+</div>
+<div class="flex items-center justify-between pt-1 bg-surface-container-lowest/80 px-2 py-1.5 rounded-md">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="font-label-sm text-label-sm">Shift: 08:30 - 17:00 (Terminal 02)</span>
+</div>
+<span class="inline-flex items-center gap-1 text-[11px] font-semibold text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span>
+            On Duty
+          </span>
+</div>
+</div>
+<!-- Member 3: Helper -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col space-y-2">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center font-bold text-xs shrink-0">
+              SV
+            </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Siddharth Varma</span>
+<span class="font-body-sm text-body-sm text-secondary">floor.support@greenharvest.io</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-tertiary-fixed text-on-tertiary-fixed">
+            Helper
+          </span>
+</div>
+<div class="flex items-center justify-between pt-1 bg-surface-container-lowest/80 px-2 py-1.5 rounded-md">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="font-label-sm text-label-sm">Shift: 13:00 - 21:30 (Evening)</span>
+</div>
+<span class="inline-flex items-center gap-1 text-[11px] font-semibold text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+            Break / Standby
+          </span>
+</div>
+</div>
+</div>
+<!-- Quick Add Member Trigger Banner -->
+<button class="w-full py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 transition-colors" onclick="triggerQuickProvisionModal()">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Provision New Staff Credentials</span>
+</button>
+</div>
+<!-- Interactive Provisioning Drawer / Modal Overlay -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden flex-col justify-end p-safe transition-opacity duration-300" id="provisionModal">
+<div class="w-full bg-surface-container-lowest rounded-t-2xl shadow-2xl p-space-md flex flex-col space-y-space-md max-h-[751px] overflow-y-auto">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-lg bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Provision User Access</h3>
+<span class="font-body-sm text-body-sm text-secondary">Assign Role &amp; Store Privileges</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant" onclick="closeQuickProvisionModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="space-y-space-sm">
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Staff Member Full Name</label>
+<input class="w-full bg-surface-container-low p-space-sm rounded-lg font-body-md text-body-md text-on-surface outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#1d4ed8]" id="newStaffName" placeholder="e.g. Priya Sundaram" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Role Tier</label>
+<select class="w-full bg-surface-container-low p-space-sm rounded-lg font-body-md text-body-md text-on-surface outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#1d4ed8]" id="newStaffRole">
+<option value="Manager">Manager (Full Catalog &amp; Restock Approval)</option>
+<option selected="" value="Cashier">Cashier (POS Checkout &amp; Auto-Stock Hook)</option>
+<option value="Helper">Helper (Sales Trends &amp; Floor Discussions)</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Assigned Shift Schedule</label>
+<div class="grid grid-cols-2 gap-2">
+<div class="bg-surface-container-low p-2 rounded-lg text-center cursor-pointer hover:bg-surface-container shift-opt border-2 border-transparent" onclick="selectShift(this, '07:00 - 15:30 (Morning)')">
+<span class="font-label-sm text-label-sm block font-semibold text-on-surface">Morning Shift</span>
+<span class="font-body-sm text-body-sm text-secondary">07:00 - 15:30</span>
+</div>
+<div class="bg-surface-container-low p-2 rounded-lg text-center cursor-pointer hover:bg-surface-container shift-opt border-2 border-primary" onclick="selectShift(this, '14:30 - 23:00 (Evening)')">
+<span class="font-label-sm text-label-sm block font-semibold text-on-surface">Evening Shift</span>
+<span class="font-body-sm text-body-sm text-secondary">14:30 - 23:00</span>
+</div>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Assigned Work Email</label>
+<input class="w-full bg-surface-container-low p-space-sm rounded-lg font-body-md text-body-md text-on-surface outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#1d4ed8]" id="newStaffEmail" placeholder="priya@greenharvest.io" type="email"/>
+</div>
+</div>
+<div class="pt-2 flex items-center gap-2">
+<button class="w-1/3 py-2.5 bg-surface-container text-on-surface rounded-lg font-label-md text-label-md font-semibold" onclick="closeQuickProvisionModal()">
+          Cancel
+        </button>
+<button class="w-2/3 py-2.5 bg-primary text-on-primary rounded-lg font-label-md text-label-md font-semibold shadow-md active:scale-95 transition-transform flex items-center justify-center gap-1.5" onclick="commitNewStaff()">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Deploy Credentials</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Notification Toast Simulation -->
+<div class="fixed top-24 left-4 right-4 z-50 bg-on-background text-on-primary px-4 py-3 rounded-xl shadow-xl flex items-center justify-between transition-all duration-300 opacity-0 pointer-events-none translate-y-[-10px]" id="toastNotification">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]">check_circle</span>
+<span class="font-body-md text-body-md font-medium" id="toastMsg">Atlas cluster updated. Member provisioned!</span>
+</div>
+</div>
+</div>
+<script>
+  let selectedShiftVal = '14:30 - 23:00 (Evening)';
+
+  function switchAuthTab(mode) {
+    const regTab = document.getElementById('tabRegisterBtn');
+    const loginTab = document.getElementById('tabLoginBtn');
+    const regForm = document.getElementById('registerForm');
+    const loginForm = document.getElementById('loginForm');
+
+    if (mode === 'register') {
+      regTab.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+      regTab.classList.remove('text-secondary');
+      loginTab.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+      loginTab.classList.add('text-secondary');
+
+      regForm.classList.remove('hidden');
+      loginForm.classList.add('hidden');
+    } else {
+      loginTab.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+      loginTab.classList.remove('text-secondary');
+      regTab.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+      regTab.classList.add('text-secondary');
+
+      loginForm.classList.remove('hidden');
+      regForm.classList.add('hidden');
+    }
+  }
+
+  function triggerQuickProvisionModal() {
+    const modal = document.getElementById('provisionModal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeQuickProvisionModal() {
+    const modal = document.getElementById('provisionModal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  function selectShift(el, shiftName) {
+    document.querySelectorAll('.shift-opt').forEach(opt => {
+      opt.classList.remove('border-primary');
+      opt.classList.add('border-transparent');
+    });
+    el.classList.remove('border-transparent');
+    el.classList.add('border-primary');
+    selectedShiftVal = shiftName;
+  }
+
+  function showToast(message) {
+    const toast = document.getElementById('toastNotification');
+    const toastMsg = document.getElementById('toastMsg');
+    toastMsg.innerText = message;
+    toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-[-10px]');
+    toast.classList.add('opacity-100', 'translate-y-0');
+
+    setTimeout(() => {
+      toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-[-10px]');
+      toast.classList.remove('opacity-100', 'translate-y-0');
+    }, 2800);
+  }
+
+  function simulateProvisionSuccess() {
+    showToast('Shop credentials authenticated via Atlas Cluster0!');
+  }
+
+  function commitNewStaff() {
+    const name = document.getElementById('newStaffName').value.trim() || 'Priya Sundaram';
+    const email = document.getElementById('newStaffEmail').value.trim() || 'priya.s@greenharvest.io';
+    const role = document.getElementById('newStaffRole').value;
+    const initials = name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase() || 'PS';
+
+    let badgeClass = 'bg-secondary-container text-on-secondary-fixed';
+    if (role === 'Manager') badgeClass = 'bg-primary-fixed text-on-primary-fixed-variant';
+    if (role === 'Helper') badgeClass = 'bg-tertiary-fixed text-on-tertiary-fixed';
+
+    const rosterContainer = document.getElementById('rosterListContainer');
+    const newCard = document.createElement('div');
+    newCard.className = 'p-space-sm rounded-lg bg-surface-container-low flex flex-col space-y-2 animate-pulse';
+    newCard.innerHTML = `
+      <div class="flex items-start justify-between">
+        <div class="flex items-center gap-2">
+          <div class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xs shrink-0">
+            ${initials}
+          </div>
+          <div class="flex flex-col">
+            <span class="font-label-md text-label-md text-on-surface font-semibold">${name}</span>
+            <span class="font-body-sm text-body-sm text-secondary">${email}</span>
+          </div>
+        </div>
+        <span class="px-2 py-0.5 rounded-full text-[11px] font-semibold ${badgeClass}">
+          ${role}
+        </span>
+      </div>
+      <div class="flex items-center justify-between pt-1 bg-surface-container-lowest/80 px-2 py-1.5 rounded-md">
+        <div class="flex items-center gap-1.5 text-secondary">
+          <span class="material-symbols-outlined text-[16px]">schedule</span>
+          <span class="font-label-sm text-label-sm">Shift: ${selectedShiftVal}</span>
+        </div>
+        <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-tertiary">
+          <span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span>
+          Provisioned
+        </span>
+      </div>
+    `;
+
+    rosterContainer.prepend(newCard);
+    setTimeout(() => newCard.classList.remove('animate-pulse'), 800);
+
+    closeQuickProvisionModal();
+    showToast(`Staff member ${name} granted ${role} clearance.`);
+    
+    // reset inputs
+    document.getElementById('newStaffName').value = '';
+    document.getElementById('newStaffEmail').value = '';
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-2px_10px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-bold"><div class="grid grid-cols-6 h-16 items-center px-1"><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] transition-colors text-primary font-bold" data-path="auth-store" href="#"><span class="material-symbols-outlined text-[20px]">storefront</span><span class="font-label-sm text-[10px] leading-tight text-center truncate max-w-[52px]">Auth/Store</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] text-on-surface-variant transition-colors" data-path="inventory" href="#"><span class="material-symbols-outlined text-[20px]">shelves</span><span class="font-label-sm text-[10px] leading-tight text-center truncate max-w-[52px]">Inventory</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] text-on-surface-variant transition-colors" data-path="restock-suppliers" href="#"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span class="font-label-sm text-[10px] leading-tight text-center truncate max-w-[52px]">Restock</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] text-on-surface-variant transition-colors" data-path="pos-billing" href="#"><span class="material-symbols-outlined text-[20px]">point_of_sale</span><span class="font-label-sm text-[10px] leading-tight text-center truncate max-w-[52px]">POS</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] text-on-surface-variant transition-colors" data-path="forum" href="#"><span class="material-symbols-outlined text-[20px]">forum</span><span class="font-label-sm text-[10px] leading-tight text-center truncate max-w-[52px]">Forum</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] text-on-surface-variant transition-colors" data-path="analytics-ai" href="#"><span class="material-symbols-outlined text-[20px]">auto_graph</span><span class="font-label-sm text-[10px] leading-tight text-center truncate max-w-[52px]">Analytics</span></a></div></nav></body></html>

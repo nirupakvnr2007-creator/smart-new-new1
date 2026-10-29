@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-primary": "#b7c4ff", "tertiary-container": "#006948", "outline-variant": "#c4c5d7", "on-background": "#0b1c30", "on-secondary-container": "#5c647a", "outline": "#747686", "on-surface-variant": "#434655", "background": "#f8f9ff", "tertiary-fixed-dim": "#68dba9", "on-secondary": "#ffffff", "on-secondary-fixed": "#131b2e", "surface-container-lowest": "#ffffff", "on-surface": "#0b1c30", "surface-container-highest": "#d3e4fe", "on-primary-fixed-variant": "#0039b5", "on-error": "#ffffff", "inverse-surface": "#213145", "secondary-fixed-dim": "#bec6e0", "surface": "#f8f9ff", "surface-variant": "#d3e4fe", "surface-container-low": "#eff4ff", "primary-fixed": "#dce1ff", "error-container": "#ffdad6", "on-primary-container": "#cad3ff", "tertiary-fixed": "#85f8c4", "surface-container-high": "#dce9ff", "on-tertiary-fixed-variant": "#005137", "tertiary": "#004f35", "surface-container": "#e5eeff", "primary-fixed-dim": "#b7c4ff", "on-secondary-fixed-variant": "#3f465c", "on-primary-fixed": "#001551", "on-tertiary-container": "#76eab6", "secondary-container": "#dae2fd", "secondary": "#565e74", "error": "#ba1a1a", "on-tertiary": "#ffffff", "surface-dim": "#cbdbf5", "on-tertiary-fixed": "#002114", "inverse-on-surface": "#eaf1ff", "secondary-fixed": "#dae2fd", "on-primary": "#ffffff", "primary-container": "#1d4ed8", "primary": "#0037b0", "on-error-container": "#93000a", "surface-tint": "#2151da", "surface-bright": "#f8f9ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "margin": "2rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "gutter-sm": "1rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-md": "1rem", "space-xl": "2.5rem" }, "fontFamily": { "body-md": ["Plus Jakarta Sans"], "headline-lg": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "label-sm": ["Plus Jakarta Sans"], "metric-mono": ["Space Grotesk"], "display-lg": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "title-md": ["Space Grotesk"], "body-sm": ["Plus Jakarta Sans"], "display-lg-mobile": ["Space Grotesk"], "label-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "metric-mono": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 px-space-md flex flex-col justify-center"><div class="flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[20px]">inventory_2</span></div><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface leading-none tracking-tight">Smart Retail Assistant</span><span class="font-label-sm text-label-sm text-secondary leading-tight mt-0.5">Mepco Retail Hub</span></div></div><div class="flex items-center gap-space-xs"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm">Admin</span><button class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between pt-1 mt-0.5"><div class="flex items-center gap-1.5 overflow-hidden"><span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim shrink-0 animate-pulse"></span><span class="font-label-sm text-label-sm text-tertiary truncate max-w-[210px]">Connected: retail_hub_db / Cluster0</span></div><div class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold tracking-wider">Restock Suppliers</div></div></div></header><main class="flex flex-col relative w-full pt-20 pb-24 px-space-md bg-surface flex-grow"><div class="flex flex-col w-full space-y-space-md">
+<!-- Active Threshold Alerts Banner -->
+<div class="relative overflow-hidden rounded-xl bg-error-container p-space-md shadow-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-error flex items-center justify-center shrink-0 text-on-error">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="inline-flex w-2 h-2 rounded-full bg-error animate-ping"></span>
+<span class="font-headline-md text-headline-md text-on-error-container">3 SKUs Breached Safety Minimum</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-error-container opacity-90 mt-0.5">Automated safety buffer triggered. Instant purchase dispatch ready.</p>
+</div>
+</div>
+<button class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container-lowest text-error font-label-sm text-label-sm shadow-sm hover:bg-surface-container transition-colors">
+        View All 3
+      </button>
+</div>
+</div>
+<!-- Primary Replenishment Request Showcase Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-md">
+<!-- Header with SKU & Status Indicator -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-14 h-14 rounded-lg bg-surface-container-low flex items-center justify-center overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Tetra pack carton of Organic Almond Milk 1L on minimalist clean studio counter, crisp commercial product photography with warm natural lighting and light pastel blue-tinted studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLYt9TqM99FjEZPa-xY2gbw1hfjQE4VMEswOLgPVV7UTY3zA1awSkNWl2OsgQVIMX2RI8JwPi1dbo5HPoqZhGNrPNAZYUU4FLIx20UY6jcXaN1D7L_SVEGyYojBJm7fmQW0CqWjrOtkDCzG7v2qBRfUya83gTdUDglLeyvsRBeuB2LRnbW_WxSZD82K-LhGZaLNNFQRNPJnBcBKvQ1k0yg-vwiHPN52grYwX4yfJxHIDiYOx1A8Uo2BA"/>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface truncate">Organic Almond Milk 1L</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm shrink-0">Critical Stock</span>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-secondary mt-0.5">
+<span>SKU-102</span>
+<span>•</span>
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[14px]">category</span>Beverages &amp; Dairy</span>
+</div>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm shrink-0 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span> Automated PO
+      </span>
+</div>
+<!-- Stock Metrics Breakdown -->
+<div class="grid grid-cols-3 gap-space-sm p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary">Current Stock</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-metric-mono text-metric-mono text-error">4</span>
+<span class="font-body-sm text-body-sm text-secondary">units</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 26%;"></div>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary">Min Threshold</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-metric-mono text-metric-mono text-on-surface">15</span>
+<span class="font-body-sm text-body-sm text-secondary">units</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1.5 flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px] text-outline">verified_user</span> Safety Level
+        </span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary">Suggested Restock</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-metric-mono text-metric-mono text-primary">+50</span>
+<span class="font-body-sm text-body-sm text-secondary">units</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary mt-1.5 flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">trending_up</span> 14 Days Run
+        </span>
+</div>
+</div>
+<!-- Supplier Identity Details Block -->
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">store</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">GreenFarms Logistics</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm">Primary Vendor</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">ID: VEND-994</span>
+</div>
+<div class="grid grid-cols-1 gap-1.5 pt-1">
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">mail</span>
+<span>orders@greenfarms.in</span>
+</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest font-label-sm text-label-sm text-secondary">Verified SMTP</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">phone_in_talk</span>
+<span>+91 98402 11223</span>
+</span>
+<span class="font-label-sm text-label-sm text-tertiary">Direct Dispatch Line</span>
+</div>
+</div>
+</div>
+<!-- Restock Email Draft Interactive Module -->
+<div class="bg-surface rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[16px]">forward_to_inbox</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface leading-tight">Automated Restock Email Draft</h4>
+<span class="font-label-sm text-label-sm text-secondary">AI Synthesis from Inventory Trigger</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-tertiary">auto_awesome</span> Smart Template
+        </span>
+</div>
+<!-- Email Headers Fieldset -->
+<div class="space-y-1.5 pt-1">
+<div class="flex items-center gap-2 bg-surface-container-lowest rounded-lg px-3 py-2 text-on-surface shadow-xs">
+<span class="font-label-sm text-label-sm text-secondary w-12 shrink-0">To:</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">orders@greenfarms.in</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-lowest rounded-lg px-3 py-2 text-on-surface shadow-xs">
+<span class="font-label-sm text-label-sm text-secondary w-12 shrink-0">CC:</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">storemanager@retailhub.mepco.ac.in</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-lowest rounded-lg px-3 py-2 text-on-surface shadow-xs">
+<span class="font-label-sm text-label-sm text-secondary w-12 shrink-0">Subject:</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold truncate">Urgent PO Restock Request: SKU-102 (50 Units) - GreenHarvest</span>
+</div>
+</div>
+<!-- Interactive Editable Body -->
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-secondary flex items-center justify-between" for="po-email-body">
+<span>Draft Message Content</span>
+<span class="text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">tune</span> Live Editable
+          </span>
+</label>
+<textarea class="w-full bg-surface-container-lowest rounded-lg p-3 font-body-sm text-body-sm text-on-surface leading-relaxed resize-none focus:outline-none focus:shadow-md transition-shadow" id="po-email-body" rows="6">Dear GreenFarms Logistics Fulfillment Team,
+
+Please generate an expedited Purchase Order dispatch for SKU-102:
+• Item Description: Organic Almond Milk 1L
+• Requested Volume: 50 units
+• Target Inward Dock: Mepco Central Warehouse - Bay 4 (Dock Inwarding)
+• Terms of Settlement: Net 30, Electronic Fund Transfer on Inward Quality Clearance
+• Tracking Note: Buffer emergency replenished under Hub Safety Rule #B-44
+
+Kindly confirm the delivery estimated dispatch slot by reply.
+
+Best regards,
+Automated Procurement System | Mepco Retail Hub</textarea>
+</div>
+<!-- Action Button Group -->
+<div class="pt-2 flex flex-col gap-2">
+<button class="w-full min-h-[44px] rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md flex items-center justify-center gap-2 shadow-sm transition-all active:scale-[0.99]" id="send-email-btn" onclick="triggerEmailConfirmation()">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Approve &amp; Send Supplier Email</span>
+</button>
+<div class="grid grid-cols-2 gap-2">
+<button class="min-h-[40px] rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm hover:bg-surface-container-low transition-colors" onclick="promptEditQuantity()">
+<span class="material-symbols-outlined text-[16px] text-primary">edit_note</span>
+<span>Edit Quantity</span>
+</button>
+<button class="min-h-[40px] rounded-lg bg-surface-container-lowest text-error font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm hover:bg-error-container transition-colors" onclick="rejectPoAlert()">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span>Reject Request</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Notification Toast Banner on Approval (Client-side toggled) -->
+<div class="hidden rounded-xl bg-tertiary text-on-tertiary p-space-sm shadow-md flex items-center justify-between transition-all" id="status-toast">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed">check_circle</span>
+<span class="font-label-md text-label-md">Supplier PO Dispatched to GreenFarms! Logged in DB.</span>
+</div>
+<button class="text-on-tertiary opacity-80 hover:opacity-100" onclick="dismissToast()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Additional Breached SKUs Summary Carousel/Row -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface">Other Low-Stock SKUs Pending Review</h3>
+<span class="font-label-sm text-label-sm text-secondary">2 Items</span>
+</div>
+<div class="grid grid-cols-1 gap-space-sm">
+<!-- Item 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Glass jar of pure golden wildflower honey with metallic lid, clean bright background, minimal packaging label, bright modern retail style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ5BKpqeeItBUASk0HjZfUJ0YqIUhr_mjr4wdZNFwYVLQ_jz2TmEjzpISvyoUfirmXIKVZGvU9lKJEKo1LliUY9H3xx8kucFOyMBHKQtLziaDLo2MnQHwRuW5JxttvFlr9ZgglNBSDg3inpBKSUWn1Y-vsFgWCiXRUsiypXdyiuCOGziE4cnJufG0e7YQi9m3K1dTJxPY36gUcCA_ZO9GP0xnNYlKBCEGu1Fbhtb3nh5NGPP8MkLqjeg"/>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface text-sm truncate max-w-[170px]">Wildflower Honey 500g</span>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary mt-0.5">
+<span>SKU-208</span>
+<span>•</span>
+<span class="text-error font-semibold">Stock: 2 left</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm">+30 Units</span>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Kraft paper pouch of whole grain rolled oats with resealable zip, crisp studio food packshot on clean white table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr4uGcaQKmlsGTbHwGtxQowTNVxGDieezprPHErHMQVm-8ZOXALDUaWVph_ZkkQs9Udqfs31MPZj-xr0JNRb2deI2t66E7JCPs-W8opf-fsOYztR8KhftQmOBx_zQm3LaO6FfEgzY7SYCkN25_eijeT1paVV6Ehexs1OXtqf8OGyXYnLeQbjs-DXsltTsxD9aPLLoY6App51TaUnS6rgPvdUBmzoS2Yp1BjKptwBVIs-g3KwQvJ093Bw"/>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface text-sm truncate max-w-[170px]">Rolled Oats 1kg</span>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary mt-0.5">
+<span>SKU-314</span>
+<span>•</span>
+<span class="text-error font-semibold">Stock: 5 left</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm">+100 Units</span>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Past Restocking History Log -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">history</span>
+<h3 class="font-title-md text-title-md text-on-surface">Past Restocking History</h3>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">MongoDB Inward Log</span>
+</div>
+<!-- History Timeline / Item List -->
+<div class="space-y-3">
+<!-- Log 1: Delivered & Confirmed -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Cold Pressed Olive Oil 500ml</span>
+<span class="font-label-sm text-label-sm text-secondary">PO-9042 • SKU-044 • Mediterranean Exports</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm shrink-0 flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[12px]">done_all</span> Delivered &amp; Confirmed
+          </span>
+</div>
+<div class="flex items-center justify-between pt-1 font-body-sm text-body-sm">
+<span class="text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">database</span> +40 units credited to MongoDB
+          </span>
+<span class="font-label-sm text-label-sm text-secondary">Today, 10:45 AM</span>
+</div>
+</div>
+<!-- Log 2: PO Email Sent -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Greek Yogurt Natural 400g</span>
+<span class="font-label-sm text-label-sm text-secondary">PO-9041 • SKU-089 • DairyPure Direct</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm shrink-0 flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[12px]">outgoing_mail</span> PO Email Sent
+          </span>
+</div>
+<div class="flex items-center justify-between pt-1 font-body-sm text-body-sm">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-outline">mark_email_read</span> Supplier ACK Received
+          </span>
+<span class="font-label-sm text-label-sm text-secondary">Yesterday, 4:20 PM</span>
+</div>
+</div>
+<!-- Log 3: Pending Supplier Dispatch -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Cold Brew Concentrate 1L</span>
+<span class="font-label-sm text-label-sm text-secondary">PO-9039 • SKU-117 • RoastCraft Distro</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm shrink-0 flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[12px]">local_shipping</span> Pending Supplier Dispatch
+          </span>
+</div>
+<div class="flex items-center justify-between pt-1 font-body-sm text-body-sm">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">schedule</span> ETA: Tomorrow Morning
+          </span>
+<span class="font-label-sm text-label-sm text-secondary">Yesterday, 11:15 AM</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function triggerEmailConfirmation() {
+    const btn = document.getElementById('send-email-btn');
+    const toast = document.getElementById('status-toast');
+    
+    btn.innerHTML = `<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Transmitting Purchase Order...</span>`;
+    btn.disabled = true;
+
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-[18px]">done</span><span>Sent to orders@greenfarms.in</span>`;
+      btn.classList.remove('bg-primary', 'hover:bg-primary-container');
+      btn.classList.add('bg-tertiary-container', 'text-on-tertiary-container');
+      
+      toast.classList.remove('hidden');
+    }, 900);
+  }
+
+  function promptEditQuantity() {
+    const qty = prompt("Adjust Replenishment Units for SKU-102 (Almond Milk 1L):", "50");
+    if (qty && !isNaN(qty)) {
+      const textarea = document.getElementById('po-email-body');
+      textarea.value = textarea.value.replace(/Requested Volume: \d+ units/, `Requested Volume: ${qty} units`);
+      alert(`Restock quantity adjusted to ${qty} units. Draft subject and specifications updated.`);
+    }
+  }
+
+  function rejectPoAlert() {
+    if (confirm("Confirm dismissal of auto-generated Purchase Order for SKU-102? This will snooze alerts for 12 hours.")) {
+      alert("PO Trigger rejected and logged in Hub Audit stream.");
+    }
+  }
+
+  function dismissToast() {
+    document.getElementById('status-toast').classList.add('hidden');
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-2px_10px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-bold"><div class="grid grid-cols-6 h-16 items-center px-1"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] text-on-surface-variant transition-colors" data-path="auth-store" href="#"><span class="material-symbols-outlined text-[20px]">storefront</span><span class="font-label-sm text-[10px] leading-tight text-center truncate max-w-[52px]">Auth/Store</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] text-on-surface-variant transition-colors" data-path="inventory" href="#"><span class="material-symbols-outlined text-[20px]">shelves</span><span class="font-label-sm text-[10px] leading-tight text-center truncate max-w-[52px]">Inventory</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] transition-colors text-primary font-bold" data-path="restock-suppliers" href="#"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span class="font-label-sm text-[10px] leading-tight text-center truncate max-w-[52px]">Restock</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] text-on-surface-variant transition-colors" data-path="pos-billing" href="#"><span class="material-symbols-outlined text-[20px]">point_of_sale</span><span class="font-label-sm text-[10px] leading-tight text-center truncate max-w-[52px]">POS</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] text-on-surface-variant transition-colors" data-path="forum" href="#"><span class="material-symbols-outlined text-[20px]">forum</span><span class="font-label-sm text-[10px] leading-tight text-center truncate max-w-[52px]">Forum</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] text-on-surface-variant transition-colors" data-path="analytics-ai" href="#"><span class="material-symbols-outlined text-[20px]">auto_graph</span><span class="font-label-sm text-[10px] leading-tight text-center truncate max-w-[52px]">Analytics</span></a></div></nav></body></html>
